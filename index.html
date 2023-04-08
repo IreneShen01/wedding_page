@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <title>The wedding of Charlie & Irene</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <script
+      src="https://kit.fontawesome.com/029af40cc1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/first.css" />
+    <!--以下為小圖示的來源-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- 以下是AJAX -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- 以下為w3school的引用 -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <!--以下是網頁縮圖的圖示-->
+    <link rel="icon" href="/images/wedding-invitation.png" />
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="#home" class="w3-bar-item w3-button w3-wide"
+          ><i class="fa-solid fa-house"></i
+        ></a>
+        <!-- Right-sided navbar links -->
+        <div
+          class="w3-right w3-hide-small"
+          style="font-family: Microsoft JhengHei"
+        >
+          <a href="#intro" class="w3-bar-item w3-button">新郎新娘</a>
+          <a href="#photo" class="w3-bar-item w3-button">精選照片</a>
+          <a href="#wedding" class="w3-bar-item w3-button">婚宴資訊</a>
+          <a href="#ctdw" class="w3-bar-item w3-button">婚禮倒數</a>
+          <a href="#sheet" class="w3-bar-item w3-button">出席回覆</a>
+        </div>
+
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+          onclick="w3_open()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 左側的導覽列-用在手機等小螢幕上-->
+    <nav
+      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large"
+      style="display: none; font-family: Microsoft JhengHei"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16"
+        ><i class="fa-solid fa-xmark"></i
+      ></a>
+      <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button"
+        >新郎新娘</a
+      >
+      <a href="#photo" onclick="w3_close()" class="w3-bar-item w3-button"
+        >精選照片</a
+      >
+      <a href="#wedding" onclick="w3_close()" class="w3-bar-item w3-button"
+        >婚宴資訊</a
+      >
+      <a href="#ctdw" onclick="w3_close()" class="w3-bar-item w3-button"
+        >婚禮倒數</a
+      >
+      <a href="#sheet" onclick="w3_close()" class="w3-bar-item w3-button"
+        >出席回覆</a
+      >
+    </nav>
+
+    <!-- 首頁首張圖片-海的部分 -->
+    <header class="parallax w3-display-container" id="home">
+      <div class="parallax">
+        <img src="/images/favicon.png" class="hero-img" />
+        <h1 class="hero-text1">WE ARE GETTING MARRIED<br />-2023/10/29-</h1>
+      </div>
+    </header>
+
+    <!-- 新郎新娘-->
+    <div class="w3-container" id="intro" style="padding: 50px 16px">
+      <h1 class="w3-center" style="font-family: Microsoft JhengHei">
+        新郎新娘
+      </h1>
+      <h3 class="w3-center" style="font-family: Microsoft JhengHei">
+        Introduction
+      </h3>
+      <div class="w3-row-padding" style="margin-top: 64px">
+        <div class="w3-col m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="/images/man.jpg" alt="John" style="width: 100%" />
+            <div class="w3-container">
+              <h3 style="font-family: Microsoft JhengHei">
+                陳威豪 Charlie Chen
+              </h3>
+              <p class="w3-opacity" style="font-family: Microsoft JhengHei">
+                新郎 Groom
+              </p>
+              <p style="font-family: Microsoft JhengHei">
+                年過30的男子，平常喜歡打打遊戲、看看電影和運動健身，今年10月即將成為人夫。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="/images/woman.jpg" alt="Jane" style="width: 100%" />
+            <div class="w3-container">
+              <h3 style="font-family: Microsoft JhengHei">沈庭葳 Irene Shen</h3>
+              <p class="w3-opacity" style="font-family: Microsoft JhengHei">
+                新娘 Bride
+              </p>
+              <p style="font-family: Microsoft JhengHei">
+                還沒30的女子，平常喜歡吸收新知、戶外踏青和觀察事物，今年10月即將成為人妻。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 精選照片 -->
+    <div
+      class="w3-container"
+      style="padding: 50px 16px; font-family: Microsoft JhengHei"
+      id="photo"
+    >
+      <h1 class="w3-center" style="font-family: Microsoft JhengHei">
+        精選照片
+      </h1>
+      <h3
+        class="w3-center"
+        style="padding: 0px 16px 50px 16px; font-family: Microsoft JhengHei"
+      >
+        Story Highlights
+      </h3>
+      <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="/images/bn (1).jpg" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="/images/bn (2).jpg" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="/images/bn (3).jpg" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="/images/bn (4).jpg" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="/images/bn (5).jpg" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="/images/bn (6).jpg" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/images/bn (1).jpg"
+              onclick="currentSlide(1)"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/images/bn (2).jpg"
+              onclick="currentSlide(2)"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/images/bn (3).jpg"
+              onclick="currentSlide(3)"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/images/bn (4).jpg"
+              onclick="currentSlide(4)"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/images/bn (5).jpg"
+              onclick="currentSlide(5)"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/images/bn (6).jpg"
+              onclick="currentSlide(6)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 婚宴資訊 -->
+    <div class="w3-container" id="wedding" style="padding: 40px 16px 50px 16px">
+      <h1 class="w3-center" style="font-family: Microsoft JhengHei">
+        婚宴資訊
+      </h1>
+      <h3 class="w3-center" style="font-family: Microsoft JhengHei">
+        When & Where
+      </h3>
+      <div
+        class="w3-row-padding"
+        style="margin-top: 64px; font-family: Microsoft JhengHei"
+      >
+        <div class="container">
+          <img
+            id="user"
+            src="/images/icon1.jpg"
+            alt="Charlie"
+            style="width: 100%"
+          />
+          <h5>Irene 想問說是甚麼時候辦婚禮呢❓</h5>
+          <span class="time-right">11:59</span>
+        </div>
+
+        <div class="container darker">
+          <img
+            id="user"
+            src="/images/icon2.jpg"
+            alt="Irene"
+            style="
+              width: 100%;
+              float: right;
+              margin-left: 20px;
+              margin-right: 0;
+            "
+          />
+          <h5>📌2023/10/29 12點<br />💡那天是禮拜日喔</h5>
+          <span class="time-left">12:00</span>
+        </div>
+        <div class="container">
+          <img
+            id="user"
+            src="/images/icon1.jpg"
+            alt="Charlie"
+            style="width: 100%"
+          />
+          <h5>很不錯的時間餒❗️那婚禮要辦在哪裡❓</h5>
+          <span class="time-right">12:00</span>
+        </div>
+
+        <div class="container darker">
+          <img
+            id="user"
+            src="/images/icon2.jpg"
+            alt="Irene"
+            style="
+              width: 100%;
+              float: right;
+              margin-left: 20px;
+              margin-right: 0;
+            "
+          />
+          <h5>
+            📌新板希爾頓酒店<br />👉新北市板橋區縣民大道二段10號<br />🔔廳別：1樓吉祥B廳
+          </h5>
+          <span class="time-left">12:01</span>
+        </div>
+        <div class="container">
+          <img
+            id="user"
+            src="/images/icon1.jpg"
+            alt="Charlie"
+            style="width: 100%"
+          />
+          <h5>是不是在飯店專門的宴會樓呀❓不在新板希爾頓酒店裡面 🤔</h5>
+          <span class="time-right">12:01</span>
+        </div>
+
+        <div class="container darker">
+          <img
+            id="user"
+            src="/images/icon2.jpg"
+            alt="Irene"
+            style="
+              width: 100%;
+              float: right;
+              margin-left: 20px;
+              margin-right: 0;
+            "
+          />
+          <h5>
+            沒錯❗️用Google
+            Maps搜尋我給你的地址即可找到❗️吉祥B廳在1樓也很好找到👍
+          </h5>
+          <span class="time-left">12:02</span>
+        </div>
+        <div class="container">
+          <img
+            id="user"
+            src="/images/icon1.jpg"
+            alt="Charlie"
+            style="width: 100%"
+          />
+          <h5>太棒了，那我怎麼去最好呢❓</h5>
+          <span class="time-right">12:03</span>
+        </div>
+
+        <div class="container darker">
+          <img
+            id="user"
+            src="/images/icon2.jpg"
+            alt="Irene"
+            style="
+              width: 100%;
+              float: right;
+              margin-left: 20px;
+              margin-right: 0;
+            "
+          />
+          <h5>
+            👏開車或搭捷運都很方便喔<br />📌開車：可以停飯店內<br />📌捷運：板橋站２號出口(再步行4分鐘)
+          </h5>
+          <span class="time-left">12:03</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 婚禮倒數 -->
+
+    <div
+      class="w3-display-container"
+      id="ctdw"
+      style="padding: 40px 0px 50px 0px"
+    >
+      <h1 class="w3-center" style="font-family: Microsoft JhengHei">
+        婚禮倒數
+      </h1>
+      <h3 class="w3-center" style="font-family: Microsoft JhengHei">
+        Countdown
+      </h3>
+      <div class="container">
+        <div class="parallax_2">
+          <div
+            class="w3-center"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div class="timer">
+              <p id="day"></p>
+              <h6>days</h6>
+            </div>
+
+            <div class="timer">
+              <p id="hour"></p>
+              <h6>hours</h6>
+            </div>
+
+            <div class="timer">
+              <p id="minute"></p>
+              <h6>minutes</h6>
+            </div>
+
+            <div class="timer">
+              <p id="second"></p>
+              <h6>seconds</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--出席回覆-->
+    <div class="w3-container" id="sheet" style="padding: 40px 16px 50px 16px">
+      <h1 class="w3-center" style="font-family: Microsoft JhengHei">
+        出席回覆
+      </h1>
+      <h3 class="w3-center" style="font-family: Microsoft JhengHei">RSVP</h3>
+      <div class="w3-row-padding" style="margin-top: 64px">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSe5gwbI1KPGGb7lKxQS1RsIGC2d2X5wZ0mWLeOGlYAP-kaO1w/viewform?embedded=true"
+          width="100%"
+          height="2943px"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >載入中…</iframe
+        >
+      </div>
+    </div>
+
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+
+      function w3_open() {
+        if (mySidebar.style.display === "block") {
+          mySidebar.style.display = "none";
+        } else {
+          mySidebar.style.display = "block";
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+        mySidebar.style.display = "none";
+      }
+
+      //以下是精選照片的播放設定
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+
+      // 倒數計時設定
+      const countDownDate = new Date("October 29,2023 00:00:00").getTime();
+
+      const countdown = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        const days = Math.floor(distance / 1000 / 60 / 60 / 24);
+        const hours = Math.floor((distance / 1000 / 60 / 60) % 24);
+        const minutes = Math.floor((distance / 1000 / 60) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+        // 當小於10時前面補零
+        const day2 = days < 10 ? "0" + days : days;
+        const hour2 = hours < 10 ? "0" + hours : hours;
+        const minute2 = minutes < 10 ? "0" + minutes : minutes;
+        const second2 = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById("day").innerHTML = day2;
+        document.getElementById("hour").innerHTML = hour2;
+        document.getElementById("minute").innerHTML = minute2;
+        document.getElementById("second").innerHTML = second2;
+
+        if (distance < 0) {
+          clearInterval(countdown);
+          $("#day").text("就");
+          $("#hour").text("是");
+          $("#minute").text("今");
+          $("#second").text("天");
+        }
+      });
+    </script>
+  </body>
+</html>
