@@ -17,7 +17,7 @@ body {
   background: url("https://ireneshen01.github.io/wedding_page/images/wedding2.jpg");
   width: 100%;
   /* Set a specific height */
-  min-height: 500px;
+ /*min-height: 500px;*/
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
