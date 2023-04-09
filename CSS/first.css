@@ -54,7 +54,7 @@ body {
 
 img {
   vertical-align: middle;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -179,7 +179,7 @@ img {
 .parallax_2 {
   /* The image used */
   background: url("https://ireneshen01.github.io/wedding_page/images/ctdn2.jpg");
-  width: 100%;
+  max-width: 100%;
   /* Set a specific height */
   min-height: 400px;
   /* Create the parallax scrolling effect */
