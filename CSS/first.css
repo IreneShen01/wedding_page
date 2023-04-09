@@ -14,7 +14,7 @@ body {
 /* 讓圖片有滑動感覺 */
 .parallax {
   /* The image used */
-  background: url("/images/wedding2.jpg");
+  background: url("https://ireneshen01.github.io/wedding_page/images/wedding2.jpg");
   width: 100%;
   /* Set a specific height */
   min-height: 500px;
@@ -178,7 +178,7 @@ img {
 /* 以下為婚禮倒數背景滑動感 */
 .parallax_2 {
   /* The image used */
-  background: url("/images/ctdn2.jpg");
+  background: url("https://ireneshen01.github.io/wedding_page/images/ctdn2.jpg");
   width: 100%;
   /* Set a specific height */
   min-height: 400px;
